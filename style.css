@@ -123,4 +123,36 @@ th {
 .red {
     color: #E53935;
     font-weight: bold;
-    }
+    }/* Wallet Page */
+.wallet {
+    padding: 20px;
+}
+
+.wallet-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+button {
+    background: #f39c12;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #e67e22;
+}
