@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mining Calculator | Bit-Digital Trades & Mining</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mining Calculator</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="prices.html">Live Prices</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="wallet.html">Wallet</a></li>
+                <li><a href="mining.html">Mining</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="mining-calculator">
+        <h2>Estimate Your Mining Profits</h2>
+
+        <div class="calculator-container">
+            <label for="hashrate">Hash Rate (TH/s):</label>
+            <input type="number" id="hashrate" placeholder="Enter your hash rate">
+
+            <label for="power">Power Consumption (W):</label>
+            <input type="number" id="power" placeholder="Enter power usage">
+
+            <label for="cost">Electricity Cost ($/kWh):</label>
+            <input type="number" id="cost" placeholder="Enter electricity cost">
+
+            <button onclick="calculateMiningProfit()">Calculate</button>
+
+            <h3>Estimated Daily Earnings: <span id="daily-earnings">$0.00</span></h3>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Bit-Digital Trades & Mining. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html
