@@ -83,4 +83,12 @@ th, td {
 th {
     background: #f39c12;
     color: #000;
+}.green {
+    color: #4CAF50;
+    font-weight: bold;
 }
+
+.red {
+    color: #E53935;
+    font-weight: bold;
+    }
