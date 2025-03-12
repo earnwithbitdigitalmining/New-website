@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet | Bit-Digital Trades & Mining</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Crypto Wallet</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="prices.html">Live Prices</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="wallet.html">Wallet</a></li>
+                <li><a href="mining.html">Mining</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="wallet">
+        <h2>Your Wallet</h2>
+
+        <div class="wallet-container">
+            <div class="card">
+                <h3>Wallet Balance</h3>
+                <p><strong>$<span id="wallet-balance">0.00</span></strong></p>
+            </div>
+
+            <div class="card">
+                <h3>Deposit Funds</h3>
+                <input type="number" id="deposit-amount" placeholder="Enter amount (USD)">
+                <button onclick="depositFunds()">Deposit</button>
+            </div>
+
+            <div class="card">
+                <h3>Withdraw Funds</h3>
+                <inpu
