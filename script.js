@@ -154,3 +154,29 @@ function withdrawFunds() {
     loadWalletBalance();
     alert(`Withdrawn $${withdrawAmount.toFixed(2)} successfully!`);
 }
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Bit-Digital Trades & Mining website loaded!");
+
+    if (document.querySelector(".mining-calculator")) {
+        document.getElementById("daily-earnings").innerText = "$0.00";
+    }
+});
+
+// Function to calculate mining earnings
+function calculateMiningProfit() {
+    const hashrate = parseFloat(document.getElementById("hashrate").value);
+    const power = parseFloat(document.getElementById("power").value);
+    const cost = parseFloat(document.getElementById("cost").value);
+
+    if (isNaN(hashrate) || isNaN(power) || isNaN(cost) || hashrate <= 0 || power <= 0 || cost <= 0) {
+        alert("Please enter valid numbers for all fields.");
+        return;
+    }
+
+    const miningRewardPerTH = 0.0006; // Example reward per TH/s per day
+    const electricityCostPerDay = (power / 1000) * 24 * cost;
+    const miningEarningsPerDay = hashrate * miningRewardPerTH * 50000; // Assume BTC at $50,000
+    const netEarnings = miningEarningsPerDay - electricityCostPerDay;
+
+    document.getElementById("daily-earnings").innerText = `$${netEarnings.toFixed(2)}`;
+}
