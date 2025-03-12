@@ -102,3 +102,55 @@ function loadMarketChart() {
         }
     });
                 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Bit-Digital Trades & Mining website loaded!");
+
+    if (document.querySelector(".wallet")) {
+        loadWalletBalance();
+    }
+});
+
+let walletBalance = localStorage.getItem("walletBalance") 
+    ? parseFloat(localStorage.getItem("walletBalance")) 
+    : 1000; // Default starting balance
+
+// Function to load wallet balance
+function loadWalletBalance() {
+    document.getElementById("wallet-balance").innerText = walletBalance.toFixed(2);
+}
+
+// Function to deposit funds
+function depositFunds() {
+    let depositAmount = parseFloat(document.getElementById("deposit-amount").value);
+    
+    if (isNaN(depositAmount) || depositAmount <= 0) {
+        alert("Please enter a valid amount to deposit.");
+        return;
+    }
+
+    walletBalance += depositAmount;
+    localStorage.setItem("walletBalance", walletBalance);
+    loadWalletBalance();
+    alert(`Deposited $${depositAmount.toFixed(2)} successfully!`);
+}
+
+// Function to withdraw funds
+function withdrawFunds() {
+    let withdrawAmount = parseFloat(document.getElementById("withdraw-amount").value);
+
+    if (isNaN(withdrawAmount) || withdrawAmount <= 0) {
+        alert("Please enter a valid amount to withdraw.");
+        return;
+    }
+
+    if (withdrawAmount > walletBalance) {
+        alert("Insufficient balance!");
+        return;
+    }
+
+    walletBalance -= withdrawAmount;
+    localStorage.setItem("walletBalance", walletBalance);
+    loadWalletBalance();
+    alert(`Withdrawn $${withdrawAmount.toFixed(2)} successfully!`);
+}
