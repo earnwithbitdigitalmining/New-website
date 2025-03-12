@@ -13,7 +13,39 @@ header {
     background-color: #1e1e1e;
     padding: 20px;
 }
+/* Dashboard Page */
+.dashboard {
+    padding: 20px;
+}
 
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+}
+
+.card h3 {
+    color: #f39c12;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+}
 header h1 {
     margin: 0;
 }
